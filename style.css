@@ -135,7 +135,7 @@ body {
 #lottie{
   position: absolute;
   bottom: 0;
-  width: 600px;
+  width: 500px;
   z-index: 1;
 }
 #timer {
