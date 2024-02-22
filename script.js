@@ -1,4 +1,4 @@
-var time = 60;
+var time = 20;
 
 var display = document.getElementById("countdown");
 var message = document.getElementById("finish");
@@ -58,16 +58,16 @@ var confessions = [
   {
     good: "Good: Nimble witted",
     bad: "Bad: Too much obedient with all",
-    funny: "Funny: []",
-    name: "Rachan",
+    funny: "Funny: I had to write about her even though I didn't even know her😅",
+    name: "Anubha",
   },
 
   {
     good: "Good: Too good at whatever he/she does",
     bad: "Bad: Too good at whatever he/she does",
     funny:
-      "Funny: I had to write about her even though I didn't even know her😅",
-    name: "Anubha",
+      "Funny: [/]",
+    name: "Rachan",
   },
 ];
 var index = 0;
@@ -75,15 +75,21 @@ function updatecount() {
   display.textContent = time;
 }
 
-function displaymessage() {
-  message.textContent = confessions[index].name;
+function displaymessage() {  
   message.style.display = "block";
 }
 
+var confess_good = document.getElementById("confess_good");
+var confess_bad = document.getElementById("confess_bad");
+var confess_funny = document.getElementById("confess_funny");
+
+confess_good.textContent = confessions[index].good;
+confess_bad.textContent = confessions[index].bad;
+confess_funny.textContent = confessions[index].funny;
+message.textContent = confessions[index].name;
+
 function countdown() {
-  confess_good.textContent = confessions[index].good;
-  confess_bad.textContent = confessions[index].bad;
-  confess_funny.textContent = confessions[index].funny;
+
   var count = setInterval(() => {
     time--;
     updatecount();
@@ -93,14 +99,14 @@ function countdown() {
       var anim = lottie.loadAnimation(animationData);
     }
 
-    if (time <= 30 && time >= 10) {
+    if (time <= 5 && time >= 10) {
       display.style.color = "yellow";
-    } else if (time < 10) {
+    } else if (time < 5) {
       display.style.color = "red";
     } else {
       display.style.color = "green";
     }
-  }, 100);
+  }, 1000);
 }
 
 
@@ -133,31 +139,34 @@ lottie.loadAnimation(splash_anim);
 var play = document.getElementById("play");
 
 play.addEventListener("click", () => {
-  const targetY = next.offsetTop;
   window.scrollTo({
-    top: targetY,
+    top: document.body.scrollHeight,
     behavior: "smooth",
   });
   countdown();
 });
 
 var next = document.getElementById("next");
-var confess_good = document.getElementById("confess_good");
-var confess_bad = document.getElementById("confess_bad");
-var confess_funny = document.getElementById("confess_funny");
+
 
 next.addEventListener("click", () => {
+  index = (index + 1) % confessions.length;
+
   confess_good.textContent = confessions[index].good;
   confess_bad.textContent = confessions[index].bad;
   confess_funny.textContent = confessions[index].funny;
+  message.textContent = confessions[index].name;
+  console.log(index);
+  
 
-  index = (index + 1) % confessions.length;
   if (time === 0) {
     countdown();
-    time = 61;
+    time = 21;
     message.style.display = "none";
   } else {
-    time = 61;
+    time = 21;
+    console.log(index);
+    
   }
 });
 
