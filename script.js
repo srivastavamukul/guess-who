@@ -128,7 +128,7 @@ var animationData = {
   renderer: "svg",
   loop: false,
   autoplay: true,
-  path: "/assets/time_up.json",
+  path: "./assets/time_up.json",
 };
 
 var animdata = {
@@ -136,14 +136,14 @@ var animdata = {
   renderer: "svg",
   loop: true,
   autoplay: true,
-  path: "/assets/timer.json",
+  path: "./assets/timer.json",
 };
 var splash_anim = {
   container: document.getElementById("splash_lottie"),
   renderer: "svg",
   loop: true,
   autoplay: true,
-  path: "/assets/loading.json",
+  path: "./assets/loading.json",
 };
 
 lottie.loadAnimation(animdata);
