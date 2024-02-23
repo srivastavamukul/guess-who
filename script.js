@@ -193,26 +193,29 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 3000);
 });
 
-const buttonHandler = {
-  handleMouseMove: function(e) {
-      const magnetStrength = 10;
-      const btn = document.querySelector('#play');
-      const { left, top, width, height } = btn.getBoundingClientRect();
-      const centerX = left + width / 2;
-      const centerY = top + height / 2;
-      const distanceX = e.clientX - centerX;
-      const distanceY = e.clientY - centerY;
-      const magnetX = distanceX / magnetStrength;
-      const magnetY = distanceY / magnetStrength;
-      btn.style.transform = `translate(${magnetX}px, ${magnetY}px)`;
-  },
-  handleMouseLeave: function() {
-      const btn = document.querySelector('#play');
-      btn.style.transform = 'translate(0, 0)';
-  }
-};
-
-document.addEventListener('mousemove', buttonHandler.handleMouseMove.bind(buttonHandler));
-document.addEventListener('mouseleave', buttonHandler.handleMouseLeave.bind(buttonHandler));
+setTimeout(() => {
+  const buttonHandler = {
+    handleMouseMove: function(e) {
+        const magnetStrength = 10;
+        const btn = document.querySelector('#play');
+        const { left, top, width, height } = btn.getBoundingClientRect();
+        const centerX = left + width / 2;
+        const centerY = top + height / 2;
+        const distanceX = e.clientX - centerX;
+        const distanceY = e.clientY - centerY;
+        const magnetX = distanceX / magnetStrength;
+        const magnetY = distanceY / magnetStrength;
+        btn.style.transform = `translate(${magnetX}px, ${magnetY}px)`;
+    },
+    handleMouseLeave: function() {
+        const btn = document.querySelector('#play');
+        btn.style.transform = 'translate(0, 0)';
+    }
+  };
+  
+  document.addEventListener('mousemove', buttonHandler.handleMouseMove.bind(buttonHandler));
+  document.addEventListener('mouseleave', buttonHandler.handleMouseLeave.bind(buttonHandler));
+  
+}, 3100);
 
 
