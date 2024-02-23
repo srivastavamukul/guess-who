@@ -65,9 +65,22 @@ var confessions = [
   {
     good: "Good: Too good at whatever he/she does",
     bad: "Bad: Too good at whatever he/she does",
-    funny:
-      "Funny: [/]",
+    funny: "Funny: [/]",
     name: "Rachan",
+  },
+
+  {
+    good: "Good: He greets everyone very well",
+    bad: "Bad: R**** 211",
+    funny: "Funny: Hor vai kiddan!",
+    name: "Kunal",
+  },
+
+  {
+    good: "Good: Drake",
+    bad: "Bad: Drake",
+    funny: "Funny: Drake",
+    name: "Preetinder",
   },
 ];
 var index = 0;
@@ -99,7 +112,7 @@ function countdown() {
       var anim = lottie.loadAnimation(animationData);
     }
 
-    if (time <= 5 && time >= 10) {
+    if (time <= 10 && time >= 5) {
       display.style.color = "yellow";
     } else if (time < 5) {
       display.style.color = "red";

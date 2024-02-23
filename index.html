@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Who</title>
+    <title>Knock Knock!</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,11 +27,22 @@
       </div>
     </div>
     <div id="guess">
-      <p id="confess_good">Good: Smiles everytime</p>
-      <p id="confess_bad">Bad: Dusra ka code erase krke apna khud ka likhna</p>
-      <p id="confess_funny">Funny: Punjabi pasand hai isko</p>
+      <video
+        src="assets/back_con.mp4"
+        autoplay
+        muted
+        loop
+        id="back_con"
+      ></video>
+      <div id="confession">
+        <p id="confess_good">Good: Smiles everytime</p>
+        <p id="confess_bad">
+          Bad: Dusra ka code erase krke apna khud ka likhna
+        </p>
+        <p id="confess_funny">Funny: Punjabi pasand hai isko</p>
+        <div id="finish"></div>
+      </div>
 
-      <div id="finish"></div>
       <div id="time">
         <span id="lottie_time"></span>
         <span id="timer">You Have <span id="countdown">20</span> Seconds</span>
