@@ -58,7 +58,7 @@ var confessions = [
   {
     good: "Good: Nimble witted",
     bad: "Bad: Too much obedient with all",
-    funny: "Funny: I had to write about her even though I didn't even know her😅",
+    funny: "Funny: I had to write about them even though I didn't even know them😅",
     name: "Anubha",
   },
 
