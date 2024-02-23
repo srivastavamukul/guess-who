@@ -82,6 +82,12 @@ var confessions = [
     funny: "Funny: Drake",
     name: "Preetinder",
   },
+  {
+    good: "Good: A good listener",
+    bad: "Bad: Procrastination",
+    funny: "Funny: Walks really fast",
+    name: "Harshita",
+  },
 ];
 var index = 0;
 function updatecount() {
