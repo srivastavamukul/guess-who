@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Who</title>
+    <title>Knock Knock!</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,21 +19,33 @@
       <div id="splash_lottie"></div>
     </div>
     <div id="main">
-      <video src="/assets/back_main.mp4" autoplay loop muted id="back"></video>
+      <video src="./assets/back_main.mp4" autoplay loop muted id="back"></video>
+      <div id="overlay"></div>
       <div id="title_button">
         <h1 id="main_head">Guess Who?</h1>
         <button id="play">Play</button>
       </div>
     </div>
     <div id="guess">
-      <p id="confess_good">Good: Smiles everytime</p>
-      <p id="confess_bad">Bad: Dusra ka code erase krke apna khud ka likhna</p>
-      <p id="confess_funny">Funny: Punjabi pasand hai isko</p>
+      <video
+        src="./assets/back_conf.mp4"
+        autoplay
+        muted
+        loop
+        id="back_con"
+      ></video>
+      <div id="confession">
+        <p id="confess_good">Good: Smiles everytime</p>
+        <p id="confess_bad">
+          Bad: Dusra ka code erase krke apna khud ka likhna
+        </p>
+        <p id="confess_funny">Funny: Punjabi pasand hai isko</p>
+        <div id="finish"></div>
+      </div>
 
-      <div id="finish"></div>
       <div id="time">
         <span id="lottie_time"></span>
-        <span id="timer">You Have <span id="countdown">60</span> Seconds</span>
+        <span id="timer">You Have <span id="countdown">20</span> Seconds</span>
       </div>
       <button id="next">next</button>
 
